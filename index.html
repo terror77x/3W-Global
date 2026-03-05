@@ -10,138 +10,186 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['Inter', 'sans-serif'],
-                    },
-                    colors: {
-                        resonance: {
-                            white: '#F9F7F2',
-                            gold: '#C5A059',
-                            charcoal: '#1A1A1A',
-                            clay: '#E5E1D8'
-                        }
-                    }
+                    fontFamily: { serif: ['"Playfair Display"', 'serif'], sans: ['Inter', 'sans-serif'] },
+                    colors: { resonance: { white: '#F9F7F2', gold: '#C5A059', charcoal: '#1A1A1A', clay: '#E5E1D8' } }
                 }
             }
         }
     </script>
     <style>
         :root { scroll-behavior: smooth; }
-        body { background-color: #F9F7F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; }
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
+        body { background-color: #F9F7F2; color: #1A1A1A; -webkit-font-smoothing: antialiased; font-family: 'Inter', sans-serif; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 1.0s cubic-bezier(0.22, 1, 0.36, 1); }
         .reveal.active { opacity: 1; transform: translateY(0); }
-        .gold-gradient { background: linear-gradient(to right, #C5A059, #E5E1D8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .serif { font-family: 'Playfair Display', serif; }
         .bg-grain { background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png"); }
     </style>
 </head>
-<body class="font-serif bg-grain">
+<body class="bg-grain">
 
-    <header class="fixed w-full z-50 mix-blend-difference px-8 py-6 md:px-16 flex justify-between items-center text-white">
-        <div class="text-xl tracking-[0.4em] font-bold uppercase">3W Global</div>
-        <nav class="hidden md:flex space-x-12 text-[9px] tracking-[0.4em] font-sans font-bold uppercase">
-            <a href="#vision" class="hover:text-resonance-gold transition-all">Vision</a>
-            <a href="#solutions" class="hover:text-resonance-gold transition-all">Solutions</a>
-            <a href="#contact" class="border border-white/30 px-6 py-2 hover:bg-white hover:text-black transition-all">Contact</a>
-        </nav>
-    </header>
-
-    <section class="relative min-h-screen flex items-center px-8 md:px-20 overflow-hidden">
-        <div class="absolute inset-0 -z-10">
-            <div class="absolute inset-0 bg-resonance-charcoal/5"></div>
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&q=80&w=2069" class="w-full h-full object-cover opacity-20 grayscale" alt="B2B Landscape">
+    <nav class="fixed w-full z-50 px-8 py-6 md:px-16 flex justify-between items-center bg-resonance-white/80 backdrop-blur-md border-b border-resonance-clay/50">
+        <div class="serif text-xl font-bold tracking-[0.3em] uppercase">3W Global</div>
+        <div class="hidden md:flex space-x-10 text-[9px] tracking-[0.3em] font-bold uppercase">
+            <a href="#manifesto" class="hover:text-resonance-gold transition-all">Manifesto</a>
+            <a href="#about" class="hover:text-resonance-gold transition-all">About</a>
+            <a href="#service" class="hover:text-resonance-gold transition-all">Service</a>
+            <a href="#money-eq" class="hover:text-resonance-gold transition-all">Money EQ</a>
+            <a href="#contact" class="bg-resonance-charcoal text-white px-6 py-2 hover:bg-resonance-gold transition-all">Contact</a>
         </div>
+    </nav>
 
-        <div class="max-w-5xl">
-            <span class="inline-block text-resonance-gold font-sans font-bold tracking-[0.5em] text-[10px] mb-8 reveal">NORTH AMERICA / STRATEGIC COO</span>
-            <h1 class="text-6xl md:text-[5.5rem] leading-[1.1] font-light mb-12 tracking-tight reveal">
-                人生と富を、<br />
-                <span class="italic font-normal">自分の意思で</span><br />デザインする。
-            </h1>
-            <div class="flex flex-col md:flex-row md:items-center gap-10 reveal">
-                <p class="text-lg md:text-xl font-sans font-light opacity-70 max-w-md leading-relaxed">
-                    北米ビジネスの現場を熟知する実務家が、貴方の「人・組織・お金」を繋ぎ、世界基準の成長を構造から支える。
+    <section class="relative min-h-screen flex items-center px-8 md:px-20 pt-20">
+        <div class="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto w-full">
+            <div class="reveal">
+                <span class="text-resonance-gold font-bold tracking-[0.4em] text-[10px] mb-6 block uppercase">North America / Strategic Partnership</span>
+                <h1 class="serif text-5xl md:text-7xl leading-[1.1] mb-10 tracking-tight">
+                    人生と富を、<br /><span class="italic">自分の意思で</span><br />デザインする。
+                </h1>
+                <p class="text-lg opacity-70 max-w-md leading-loose mb-12">
+                    カナダとカリフォルニア。北米ビジネスの現場を知る実務家が、貴方の「人・組織・お金」を繋ぎ、世界基準の成長を構造から支える。
                 </p>
-                <div class="h-[1px] w-20 bg-resonance-gold hidden md:block"></div>
-                <a href="#solutions" class="text-[10px] font-sans font-bold tracking-[0.4em] uppercase border-b-2 border-resonance-gold pb-2 hover:opacity-50 transition-all">View Our Scope</a>
+                <a href="#contact" class="inline-block bg-resonance-charcoal text-white px-12 py-6 text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-resonance-gold transition-all">
+                    戦略的伴走を検討する
+                </a>
             </div>
-        </div>
-        
-        <div class="absolute bottom-20 right-8 md:right-20 text-[9px] tracking-[0.5em] vertical-rl opacity-30 font-sans font-bold rotate-180 uppercase">
-            Est. 20 Years of Experience
-        </div>
-    </section>
-
-    <section id="vision" class="py-40 bg-resonance-charcoal text-resonance-white px-8 md:px-20">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-resonance-gold font-sans font-bold tracking-[0.5em] text-[10px] mb-24 text-center uppercase reveal">Manifesto</h2>
-            <div class="space-y-16 text-3xl md:text-[2.75rem] leading-[1.6] font-light reveal">
-                <p>「依存」がある限り、<br class="hidden md:block" />本当の意思決定はできない。</p>
-                <p class="opacity-50 text-xl md:text-2xl leading-relaxed font-sans max-w-2xl">
-                    親、パートナー、あるいは組織。何かを失う恐怖が、貴方の可能性を縛っていないか。
-                </p>
-                <p>経済力は単なる数字ではなく、<br />貴方の尊厳を守る<span class="text-resonance-gold italic font-normal">「主権」</span>です。</p>
+            <div class="relative reveal" style="transition-delay: 0.3s;">
+                <div class="aspect-[4/5] bg-resonance-clay overflow-hidden grayscale contrast-125">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070" class="w-full h-full object-cover opacity-80" alt="Architectural Cityscape">
+                </div>
+                <div class="absolute -bottom-6 -left-6 w-32 h-32 border border-resonance-gold/40 -z-10"></div>
             </div>
         </div>
     </section>
 
-    <section id="solutions" class="py-40 px-8 md:px-20 bg-resonance-white">
+    <section id="manifesto" class="py-40 bg-resonance-charcoal text-white px-8 md:px-20">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-20 uppercase">Manifesto</h2>
+            <p class="serif text-3xl md:text-4xl leading-[1.8] font-light italic mb-12">
+                「経済的自立は、人生の保険ではない。<br />未来を設計するための主権である。」
+            </p>
+            <p class="text-lg opacity-60 leading-loose max-w-2xl mx-auto">
+                依存がある限り、真の意思決定はできない。嫌われたくない、失いたくないという不安を、自ら収益を生み出す「構造」によって解消する。それが私の考える自由の定義です。
+            </p>
+        </div>
+    </section>
+
+    <section id="about" class="py-40 px-8 md:px-20 bg-resonance-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+            <div class="reveal">
+                <div class="aspect-square bg-resonance-clay mb-12 grayscale">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976" class="w-full h-full object-cover" alt="Makiko Portrait">
+                </div>
+            </div>
+            <div class="reveal">
+                <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-8 uppercase">About Makiko</h2>
+                <h3 class="serif text-4xl mb-10 leading-tight">理想論ではなく、<br />20年の実務と数字の歴史。</h3>
+                <div class="space-y-6 text-sm opacity-80 leading-loose text-justify">
+                    <p>11歳で日本を離れ、北米の成果主義市場で20年以上、経営の最前線に立ち続けてきました。現場、数字、交渉、組織づくり。それらはすべて机上の空論ではなく、生き残るための実務として積み上げてきたものです。</p>
+                    <p>日本人女性が世界に出る際の「遠慮」や「お金への制限」を理解しつつ、北米で求められる「利益へのコミットメント」を熟知している。この両輪が、私の支援の根幹にあります。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="py-40 px-8 md:px-20 bg-white border-y border-resonance-clay">
         <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-32 reveal">
-                <div class="max-w-2xl">
-                    <h2 class="text-resonance-gold font-sans font-bold tracking-[0.5em] text-[10px] mb-8 uppercase">Service Scope</h2>
-                    <h3 class="text-4xl md:text-5xl font-light leading-tight">事務代行ではない。<br />「経営判断」の伴走者として。</h3>
-                </div>
-                <p class="text-sm font-sans opacity-60 mt-8 md:mt-0 tracking-widest uppercase">External COO Service</p>
+            <div class="mb-24 reveal">
+                <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-6 uppercase">Service Scope</h2>
+                <h3 class="serif text-4xl md:text-5xl">経営判断・実行の伴走者</h3>
             </div>
-
-            <div class="grid md:grid-cols-3 gap-px bg-resonance-clay border border-resonance-clay">
-                <div class="bg-resonance-white p-12 md:p-16 hover:bg-resonance-gold transition-all duration-700 group reveal">
-                    <span class="text-[10px] font-sans font-bold text-resonance-gold group-hover:text-white block mb-12">01 / NEGOTIATION</span>
-                    <h4 class="text-2xl font-light mb-8 group-hover:text-white">戦略的交渉・外部提携</h4>
-                    <p class="text-sm font-sans font-light leading-loose opacity-70 group-hover:text-white/80 transition-all">
-                        北米基準の英語ミーティング・交渉対応。単なる翻訳ではなく、利益を最大化するためのロジックで対外関係を構築します。
-                    </p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-resonance-clay border border-resonance-clay">
+                <div class="bg-white p-10 space-y-8 reveal">
+                    <h4 class="font-bold text-xs tracking-widest uppercase">01 / Strategic Negotiation</h4>
+                    <p class="text-sm opacity-70 leading-relaxed">英語での商談・パートナー交渉の主導。翻訳ではなく、利益を最大化する「交渉」を代行します。</p>
                 </div>
-                <div class="bg-resonance-white p-12 md:p-16 hover:bg-resonance-gold transition-all duration-700 group reveal">
-                    <span class="text-[10px] font-sans font-bold text-resonance-gold group-hover:text-white block mb-12">02 / STRUCTURE</span>
-                    <h4 class="text-2xl font-light mb-8 group-hover:text-white">業務・コスト最適化</h4>
-                    <p class="text-sm font-sans font-light leading-loose opacity-70 group-hover:text-white/80 transition-all">
-                        現場の混乱を構造で解決。全体構造の最適化からコストバランスの設計まで、実務に基づいた経営判断を支援します。
-                    </p>
+                <div class="bg-white p-10 space-y-8 reveal" style="transition-delay: 0.1s;">
+                    <h4 class="font-bold text-xs tracking-widest uppercase">02 / Structural Optimization</h4>
+                    <p class="text-sm opacity-70 leading-relaxed">業務設計・コストバランスの最適化。不要なコストを削り、投資すべき場所を明確化します。</p>
                 </div>
-                <div class="bg-resonance-white p-12 md:p-16 hover:bg-resonance-gold transition-all duration-700 group reveal">
-                    <span class="text-[10px] font-sans font-bold text-resonance-gold group-hover:text-white block mb-12">03 / CAPITAL</span>
-                    <h4 class="text-2xl font-light mb-8 group-hover:text-white">チーム・専門家構築</h4>
-                    <p class="text-sm font-sans font-light leading-loose opacity-70 group-hover:text-white/80 transition-all">
-                        スタッフ教育から、北米現地の弁護士・会計士といった高度専門家の選定・連携まで。貴方の事業の「盾」を構築します。
-                    </p>
+                <div class="bg-white p-10 space-y-8 reveal" style="transition-delay: 0.2s;">
+                    <h4 class="font-bold text-xs tracking-widest uppercase">03 / Human Capital Strategy</h4>
+                    <p class="text-sm opacity-70 leading-relaxed">チーム構築・スタッフ教育。オーナーがいなくても回る「自律型組織」への転換を支援します。</p>
+                </div>
+                <div class="bg-white p-10 space-y-8 reveal" style="transition-delay: 0.3s;">
+                    <h4 class="font-bold text-xs tracking-widest uppercase">04 / Executive Network</h4>
+                    <p class="text-sm opacity-70 leading-relaxed">北米拠点の弁護士・会計士等、信頼できるプロフェッショナルチームへのブリッジング。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-40 px-8 bg-resonance-white text-center">
-        <div class="reveal">
-            <h2 class="text-5xl md:text-7xl font-light mb-16 italic leading-tight">Ready to Design<br />Your Wealth?</h2>
-            <a href="mailto:contact@3wglobal.com" class="inline-block bg-resonance-charcoal text-white px-20 py-8 text-[11px] font-sans font-bold tracking-[0.5em] uppercase hover:bg-resonance-gold transition-all duration-500 shadow-2xl">
-                Consultation Inquiry
-            </a>
-            <p class="mt-16 text-[10px] font-sans font-bold tracking-[0.4em] opacity-40 uppercase">© 3W Global All Rights Reserved.</p>
+    <section id="money-eq" class="py-40 px-8 md:px-20 bg-resonance-white overflow-hidden">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-12 uppercase">Money EQ</h2>
+            <h3 class="serif text-4xl mb-12">感情と数字を一致させる。</h3>
+            <p class="text-lg opacity-70 leading-loose mb-16">
+                北米ビジネスで勝つためには、高度なスキル以上に「お金に対する健全な知能指数（Money EQ）」が求められます。恐怖や依存に基づかない、論理的なマインドセットを構築します。
+            </p>
+            <div class="grid grid-cols-2 gap-8">
+                <div class="border border-resonance-gold/30 p-8">
+                    <span class="block serif text-2xl mb-2 italic">Logic</span>
+                    <span class="text-[9px] uppercase tracking-widest opacity-50 text-resonance-charcoal">数字に基づく客観性</span>
+                </div>
+                <div class="border border-resonance-gold/30 p-8">
+                    <span class="block serif text-2xl mb-2 italic">Emotion</span>
+                    <span class="text-[9px] uppercase tracking-widest opacity-50 text-resonance-charcoal">意思を支える健全な感情</span>
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+
+    <section class="py-40 px-8 md:px-20 bg-white">
+        <div class="max-w-4xl mx-auto space-y-32">
+            <div class="reveal">
+                <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-12 uppercase">Voices</h2>
+                <div class="border-l-2 border-resonance-gold pl-12 py-4">
+                    <p class="serif text-2xl italic leading-relaxed mb-6">「北米進出における不透明なコストとリスクが、Makikoさんの介入によってすべてクリアな戦略に変わりました。」</p>
+                    <cite class="text-[10px] font-bold tracking-widest uppercase opacity-50">— 女性経営者 / 事業責任者</cite>
+                </div>
+            </div>
+            <div class="reveal">
+                <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-12 uppercase">FAQ</h2>
+                <div class="divide-y divide-resonance-clay text-sm">
+                    <div class="py-6 flex justify-between gap-10">
+                        <span class="font-bold min-w-[120px]">Q. コンサルとの違いは？</span>
+                        <span class="opacity-70">アドバイスに留まらず、COOとして実務・交渉・構造設計まで「実行」にコミットします。</span>
+                    </div>
+                    <div class="py-6 flex justify-between gap-10">
+                        <span class="font-bold min-w-[120px]">Q. 対応地域は？</span>
+                        <span class="opacity-70">カナダ・アメリカ全域、および日本からの海外進出を検討されている方が対象です。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-40 px-8 md:px-20 bg-resonance-charcoal text-white">
+        <div class="max-w-2xl mx-auto reveal text-center">
+            <h2 class="text-resonance-gold font-bold tracking-[0.5em] text-[10px] mb-12 uppercase">Inquiry</h2>
+            <p class="serif text-4xl mb-16 italic">Ready to Design Your Sovereign?</p>
+            <form class="text-left space-y-10">
+                <div class="border-b border-white/20 pb-4">
+                    <label class="text-[9px] uppercase tracking-widest opacity-50 mb-4 block">01. Name</label>
+                    <input type="text" class="bg-transparent w-full outline-none text-xl font-light italic" placeholder="Your Name">
+                </div>
+                <div class="border-b border-white/20 pb-4">
+                    <label class="text-[9px] uppercase tracking-widest opacity-50 mb-4 block">02. Vision & Challenge</label>
+                    <textarea class="bg-transparent w-full outline-none text-xl font-light italic" rows="3" placeholder="貴方のビジョンと現在の課題について"></textarea>
+                </div>
+                <button class="w-full bg-resonance-gold py-6 text-[10px] font-bold tracking-[0.5em] uppercase hover:bg-white hover:text-resonance-charcoal transition-all">
+                    審査を伴う面談を申し込む
+                </button>
+            </form>
+            <p class="mt-12 text-[9px] opacity-30 tracking-widest">※現在、本気で事業を立ち上げ、次のステージへ進む意思のある方のみ受付ております。</p>
+        </div>
+    </section>
 
     <script>
-        // Reveal on scroll
-        const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
+                if (entry.isIntersecting) entry.target.classList.add('active');
             });
-        }, observerOptions);
-
+        }, { threshold: 0.15 });
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
     </script>
 </body>
