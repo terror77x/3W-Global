@@ -1,51 +1,93 @@
-<div class="min-h-screen bg-[#F9F7F2] text-[#1A1A1A] font-serif selection:bg-[#C5A059] selection:text-white">
-  
-  <nav class="flex justify-between items-center px-8 py-10 md:px-20 max-w-7xl mx-auto">
-    <div class="text-2xl font-bold tracking-widest uppercase">3W Global</div>
-    <div class="hidden md:flex space-x-12 text-sm tracking-widest opacity-80">
-      <a href="#about" class="hover:text-[#C5A059] transition-colors">VISION</a>
-      <a href="#service" class="hover:text-[#C5A059] transition-colors">SOLUTIONS</a>
-      <a href="#contact" class="hover:text-[#C5A059] transition-colors border-b border-[#1A1A1A] pb-1">INQUIRY</a>
-    </div>
-  </nav>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3W Global | 人生と富を、自分の意思でデザインする</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        resonance: {
+                            white: '#F9F7F2',
+                            gold: '#C5A059',
+                            charcoal: '#1A1A1A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F9F7F2; color: #1A1A1A; }
+        .fade-in { animation: fadeIn 1.5s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="font-serif selection:bg-resonance-gold selection:text-white">
 
-  <section class="relative px-8 md:px-20 pt-20 pb-40 max-w-7xl mx-auto overflow-hidden">
-    <div class="flex flex-col md:flex-row items-center gap-16">
-      <div class="w-full md:w-3/5 z-10">
-        <span class="text-[#C5A059] font-medium tracking-[0.3em] text-xs mb-6 block">KNOWLEDGE / NETWORK / DECISION</span>
-        <h1 class="text-4xl md:text-6xl leading-[1.3] font-light mb-10 tracking-tight">
-          人生と富を、<br />
-          <span class="italic">自分の意思で</span>デザインする。
-        </h1>
-        <p class="text-lg md:text-xl leading-relaxed opacity-90 max-w-xl mb-12 font-sans font-light text-justify">
-          カナダとカリフォルニア。北米ビジネスの現場を熟知する実務家が、貴方の「人・組織・お金」を繋ぎ、世界基準の成長を構造から支える。
-        </p>
-        <a href="#contact" class="inline-block bg-[#1A1A1A] text-[#F9F7F2] px-12 py-5 text-sm tracking-[0.2em] hover:bg-[#C5A059] transition-all duration-500">
-          STRATEGIC PARTNERSHIP
-        </a>
-      </div>
-      <div class="w-full md:w-2/5 relative">
-        <div class="aspect-[4/5] bg-neutral-200 grayscale contrast-125 overflow-hidden">
-          <div class="w-full h-full bg-[url('https://images.unsplash.com/photo-1544144485-409da72ef2db?q=80&w=2070')] bg-cover bg-center mix-blend-multiply opacity-80"></div>
+    <nav class="flex justify-between items-center px-8 py-10 md:px-20 max-w-7xl mx-auto overflow-hidden">
+        <div class="text-2xl font-bold tracking-[0.2em] uppercase fade-in">3W Global</div>
+        <div class="hidden md:flex space-x-12 text-[10px] tracking-[0.3em] font-sans font-semibold opacity-60 fade-in">
+            <a href="#vision" class="hover:text-resonance-gold transition-colors">VISION</a>
+            <a href="#service" class="hover:text-resonance-gold transition-colors">SOLUTIONS</a>
+            <a href="#contact" class="hover:text-resonance-gold transition-colors border-b border-resonance-charcoal pb-1 uppercase">Inquiry</a>
         </div>
-        <div class="absolute -bottom-8 -left-8 w-48 h-48 border border-[#C5A059]/30 -z-10"></div>
-      </div>
-    </div>
-  </section>
+    </nav>
 
-  <section class="bg-white py-32 px-8 md:px-20">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-sm tracking-[0.4em] text-[#C5A059] mb-20 text-center uppercase">Manifesto</h2>
-      <div class="space-y-12 text-2xl md:text-3xl leading-[1.8] font-light">
-        <p>経済的自立は、単なる「お金のゆとり」ではありません。</p>
-        <p>それは、誰にも依存せず、何者にも忖度せず、<br class="hidden md:block" />自らの人生を統治するための<span class="border-b-2 border-[#C5A059]/40 italic">「主権」</span>です。</p>
-        <div class="h-px w-20 bg-[#C5A059] my-16"></div>
-        <p class="text-lg md:text-xl font-sans font-light opacity-80 leading-loose">
-          北米で20年、経営の最前線に立ち続けて見えた真理があります。<br />
-          能力の差ではなく、構造の差。私は「実務」と「Money EQ」を武器に、<br />
-          貴方が世界基準の自由を手に入れるための、最も冷徹で、最も温かい伴走者となります。
-        </p>
-      </div>
-    </div>
-  </section>
-</div>
+    <section class="relative px-8 md:px-20 pt-16 pb-32 max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-20">
+            <div class="w-full md:w-3/5 z-10 fade-in" style="animation-delay: 0.2s;">
+                <span class="text-resonance-gold font-sans font-semibold tracking-[0.4em] text-[10px] mb-8 block">NORTH AMERICA / STRATEGY / WEALTH</span>
+                <h1 class="text-5xl md:text-7xl leading-[1.2] font-light mb-12 tracking-tight">
+                    人生と富を、<br />
+                    <span class="italic">自分の意思で</span><br />デザインする。
+                </h1>
+                <p class="text-lg md:text-xl leading-relaxed opacity-80 max-w-xl mb-14 font-sans font-light text-justify">
+                    カナダとカリフォルニア。北米ビジネスの現場を熟知する実務家が、貴方の「人・組織・お金」を繋ぎ、世界基準の成長を構造から支える。
+                </p>
+                <a href="#contact" class="inline-block bg-resonance-charcoal text-resonance-white px-14 py-6 text-[10px] font-sans font-bold tracking-[0.3em] hover:bg-resonance-gold transition-all duration-700 uppercase">
+                    Strategic Partnership
+                </a>
+            </div>
+            
+            <div class="w-full md:w-2/5 relative fade-in" style="animation-delay: 0.5s;">
+                <div class="aspect-[4/5] bg-neutral-200 grayscale contrast-[1.1] brightness-[0.9] overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=2069" alt="Global Business" class="w-full h-full object-cover mix-blend-multiply opacity-90">
+                </div>
+                <div class="absolute -bottom-10 -left-10 w-40 h-40 border border-resonance-gold/20 -z-10"></div>
+                <div class="absolute top-10 -right-4 w-px h-64 bg-resonance-gold/30"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="vision" class="bg-white py-40 px-8 md:px-20 border-y border-resonance-gold/10">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-[10px] font-sans font-bold tracking-[0.5em] text-resonance-gold mb-24 uppercase">The Sovereignty</h2>
+            <div class="space-y-16 text-3xl md:text-4xl leading-[1.8] font-light">
+                <p class="fade-in" style="animation-delay: 0.8s;">経済的自立は、単なる「お金のゆとり」ではありません。</p>
+                <p class="fade-in" style="animation-delay: 1.0s;">それは、誰にも依存せず、何者にも忖度せず、<br class="hidden md:block" />自らの人生を統治するための<span class="italic border-b-2 border-resonance-gold/30">「主権」</span>です。</p>
+                
+                <div class="flex justify-center my-20">
+                    <div class="h-px w-24 bg-resonance-gold"></div>
+                </div>
+
+                <p class="text-xl md:text-2xl font-sans font-light opacity-70 leading-[2] text-justify md:text-center max-w-3xl mx-auto fade-in" style="animation-delay: 1.2s;">
+                    北米で20年、経営の最前線に立ち続けて見えた真理があります。能力の差ではなく、構造の差。私は「実務」と「Money EQ」を武器に、貴方が世界基準の自由を手に入れるための、最も冷徹で、最も温かい伴走者となります。
+                </p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
